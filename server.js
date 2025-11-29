@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 });
 
 // Serve image files from the frontend public/images folder
-const IMAGES_DIR = path.join(__dirname, "../lesson-app-frontend/public/images");
+const IMAGES_DIR = path.join(__dirname, 'images');
 app.use("/images", express.static(IMAGES_DIR));
 
 app.get("/images/:filename", (req, res) => {
@@ -363,3 +363,5 @@ connectDB()
   .catch(err => {
     console.error("Failed to start server:", err);
   });
+
+
